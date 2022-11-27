@@ -1,6 +1,5 @@
 [
   {
-    "_id": "0282e0e58a5c404fbd15261f11c2ab6a",
     "category_id": "01",
     "rating": { "number": 4.5, "badge": "Excellent" },
     "name": "iphone 14 pro max",
@@ -9,23 +8,23 @@
     "resale_price": 1099,
     "location": "Chittagong",
     "original_price": 1299,
-    "yearsOfUse": 0.5
+    "yearsOfUse": 0.5,
+    "posted": "11-12-21"
   },
   {
-    "_id": "0282e0e58a5c404fbd15261f11c2ab6b",
     "category_id": "03",
     "rating": { "number": 4.5, "badge": "Excellent" },
     "name": "Nord N300",
-    "image_url": "https://th.bing.com/th/id/R.99730cf1442a9c1a4ade194c3fd641c9?rik=z2izGrvQI5gQhQ&pid=ImgRaw&r=0",
+    "image_url": "https://th.bing.com/th/id/OIP.hm7CffTEnbrYCerdUPdzdQHaEK?pid=ImgDet&rs=1",
     "details": "",
-    "resale_price": 899,
+    "resale_price": 599,
     "location": "Chittagong",
-    "original_price": 499,
-    "yearsOfUse": 3.5
+    "original_price": 699,
+    "yearsOfUse": 3.5,
+    "posted": "11-12-21"
   },
 
   {
-    "_id": "f69a695f037cd9484cecaea37ca71011",
     "category_id": "01",
     "rating": { "number": 4.5, "badge": "Excellent" },
     "name": "iphone 13 pro max",
@@ -34,35 +33,35 @@
     "resale_price": 999,
     "location": "Dhaka",
     "original_price": 1199,
-    "yearsOfUse": 1
+    "yearsOfUse": 1,
+    "posted": "11-12-21"
   },
   {
-    "_id": "f69a695f037cd9484cecaea37ca71012",
     "category_id": "02",
     "rating": { "number": 4.5, "badge": "Excellent" },
     "name": "Galaxy M13 5g",
-    "image_url": "https://th.bing.com/th/id/R.99730cf1442a9c1a4ade194c3fd641c9?rik=z2izGrvQI5gQhQ&pid=ImgRaw&r=0",
+    "image_url": "https://manilashaker.com/wp-content/uploads/2022/07/4_Samsung-Galaxy-M13-5G.jpg",
     "details": "",
-    "resale_price": 899,
+    "resale_price": 499,
     "location": "Dhaka",
-    "original_price": 499,
-    "yearsOfUse": 3.5
+    "original_price": 599,
+    "yearsOfUse": 3.5,
+    "posted": "11-12-21"
   },
 
   {
-    "_id": "11468ed61aee84de492a8b04158a22f9",
     "category_id": "03",
     "rating": { "number": 4.5, "badge": "Excellent" },
     "name": "Ace Pro",
-    "image_url": "https://th.bing.com/th/id/R.99730cf1442a9c1a4ade194c3fd641c9?rik=z2izGrvQI5gQhQ&pid=ImgRaw&r=0",
+    "image_url": "https://st1.bgr.in/wp-content/uploads/2022/07/OnePlus-10R-5G.jpg",
     "details": "",
     "resale_price": 899,
     "location": "Tangail",
-    "original_price": 499,
-    "yearsOfUse": 3.5
+    "original_price": 999,
+    "yearsOfUse": 3.5,
+    "posted": "11-12-21"
   },
   {
-    "_id": "11468ed61aee84de492a8b04158a22f0",
     "category_id": "01",
     "rating": { "number": 4.5, "badge": "Excellent" },
     "name": "iphone 12 pro max",
@@ -71,49 +70,49 @@
     "resale_price": 999,
     "location": "Comilla",
     "original_price": 1199,
-    "yearsOfUse": 1.5
+    "yearsOfUse": 1.5,
+    "posted": "11-12-21"
   },
 
   {
-    "_id": "2e78e5e0310c2e9adbb6efb1a263e745",
     "category_id": "02",
     "rating": { "number": 4.5, "badge": "Excellent" },
     "name": "Galaxy Z Flip4",
-    "image_url": "https://th.bing.com/th/id/R.99730cf1442a9c1a4ade194c3fd641c9?rik=z2izGrvQI5gQhQ&pid=ImgRaw&r=0",
+    "image_url": "https://thetomorrowtechnology.co.ke/wp-content/uploads/2020/05/samsung-galaxy-z-flip-review-folded.jpg",
     "details": "",
-    "resale_price": 899,
+    "resale_price": 399,
     "location": "Chittagong",
     "original_price": 499,
-    "yearsOfUse": 3.5
+    "yearsOfUse": 3.5,
+    "posted": "11-12-21"
   },
 
   {
-    "_id": "a713ee936ff5574273f0f769f5c5b20e",
     "category_id": "03",
     "rating": { "number": 4.5, "badge": "Excellent" },
     "name": "Nord CE Lite 5G",
-    "image_url": "https://th.bing.com/th/id/R.99730cf1442a9c1a4ade194c3fd641c9?rik=z2izGrvQI5gQhQ&pid=ImgRaw&r=0",
+    "image_url": "https://th.bing.com/th/id/OIP.uEa9pbR9WElAo8H0ydtWDgHaE8?pid=ImgDet&rs=1",
     "details": "",
-    "resale_price": 899,
+    "resale_price": 499,
     "location": "Fokirapul",
-    "original_price": 499,
-    "yearsOfUse": 3.5
+    "original_price": 599,
+    "yearsOfUse": 3.5,
+    "posted": "11-12-21"
   },
 
   {
-    "_id": "cd2b53655737cc4077542baea9f8f75d",
     "category_id": "02",
     "rating": { "number": 4.5, "badge": "Excellent" },
     "name": "Galaxy M53",
-    "image_url": "https://th.bing.com/th/id/R.99730cf1442a9c1a4ade194c3fd641c9?rik=z2izGrvQI5gQhQ&pid=ImgRaw&r=0",
+    "image_url": "https://i.gadgets360cdn.com/large/samsung_galaxy_m53_5g_green_samsung_1650604585703.jpg",
     "details": "",
-    "resale_price": 899,
+    "resale_price": 299,
     "location": "Sylhet",
-    "original_price": 499,
-    "yearsOfUse": 3.5
+    "original_price": 399,
+    "yearsOfUse": 3.5,
+    "posted": "11-12-21"
   },
   {
-    "_id": "7c4dfea0fafddc813673282a428429b7",
     "category_id": "01",
     "rating": { "number": 4.5, "badge": "Excellent" },
     "name": "iphone xs max",
@@ -122,10 +121,10 @@
     "resale_price": 799,
     "location": "Sylhet",
     "original_price": 999,
-    "yearsOfUse": 2.5
+    "yearsOfUse": 2.5,
+    "posted": "11-12-21"
   },
   {
-    "_id": "30af81e91ab3eafc0bcae0de62f55d5c",
     "category_id": "01",
     "rating": { "number": 4.5, "badge": "Excellent" },
     "name": "iphone 13 mini",
@@ -134,22 +133,22 @@
     "resale_price": 399,
     "location": "Dhaka",
     "original_price": 599,
-    "yearsOfUse": 3
+    "yearsOfUse": 3,
+    "posted": "11-12-21"
   },
   {
-    "_id": "df11ff9feefc37613cc3a4486ce02151",
     "category_id": "02",
     "rating": { "number": 4.5, "badge": "Excellent" },
     "name": "Galaxy S22 Ultra 5G",
-    "image_url": "https://th.bing.com/th/id/R.99730cf1442a9c1a4ade194c3fd641c9?rik=z2izGrvQI5gQhQ&pid=ImgRaw&r=0",
+    "image_url": "https://th.bing.com/th/id/R.839ed6b923febb07cc16d30cf46a16bb?rik=m5%2f%2f7EIGU07Y4Q&pid=ImgRaw&r=0",
     "details": "",
-    "resale_price": 899,
+    "resale_price": 399,
     "location": "Noakhali",
     "original_price": 499,
-    "yearsOfUse": 3.5
+    "yearsOfUse": 3.5,
+    "posted": "11-12-21"
   },
   {
-    "_id": "919db97c34e0778b387dd40cdfa08130",
     "category_id": "01",
     "rating": { "number": 4.5, "badge": "Excellent" },
     "name": "iphone 12 mini",
@@ -158,66 +157,67 @@
     "resale_price": 899,
     "location": "Dhaka",
     "original_price": 499,
-    "yearsOfUse": 3.5
+    "yearsOfUse": 3.5,
+    "posted": "11-12-21"
   },
   {
-    "_id": "acb9b6785b62698fc6130db7615965e1",
     "category_id": "03",
     "rating": { "number": 4.5, "badge": "Excellent" },
     "name": "One Plus 9R",
-    "image_url": "https://th.bing.com/th/id/R.99730cf1442a9c1a4ade194c3fd641c9?rik=z2izGrvQI5gQhQ&pid=ImgRaw&r=0",
+    "image_url": "https://th.bing.com/th/id/OIP.EhH369_Ti00NsnjAqBUU2QHaEV?pid=ImgDet&rs=1",
     "details": "",
-    "resale_price": 899,
+    "resale_price": 399,
     "location": "Rajshahi",
-    "original_price": 499,
-    "yearsOfUse": 3.5
+    "original_price": 599,
+    "yearsOfUse": 3.5,
+    "posted": "11-12-21"
   },
   {
-    "_id": "1b03149456470f1bec662062d930bf46489",
     "category_id": "02",
     "rating": { "number": 4.5, "badge": "Excellent" },
     "name": "Galaxy A12",
-    "image_url": "https://th.bing.com/th/id/R.99730cf1442a9c1a4ade194c3fd641c9?rik=z2izGrvQI5gQhQ&pid=ImgRaw&r=0",
+    "image_url": "https://th.bing.com/th/id/R.a9fe08c480091549052c9bb8e1362628?rik=jyX%2fBNlLApKOXA&pid=ImgRaw&r=0",
     "details": "",
-    "resale_price": 899,
+    "resale_price": 500,
     "location": "Bagerhat",
-    "original_price": 499,
-    "yearsOfUse": 3.5
+    "original_price": 550,
+    "yearsOfUse": 3.5,
+    "posted": "11-12-21"
   },
   {
-    "_id": "1b03149c50f1bec662062d930bf46489",
     "category_id": "02",
     "rating": { "number": 4.5, "badge": "Excellent" },
     "name": "Galaxy F52 5G",
-    "image_url": "https://th.bing.com/th/id/R.99730cf1442a9c1a4ade194c3fd641c9?rik=z2izGrvQI5gQhQ&pid=ImgRaw&r=0",
+    "image_url": "https://th.bing.com/th/id/R.ff4e6fb9591ca53f66acfd84352a557f?rik=0vtAj%2b8bcLIrGg&pid=ImgRaw&r=0",
     "details": "",
-    "resale_price": 899,
+    "resale_price": 400,
     "location": "Khulna",
     "original_price": 499,
-    "yearsOfUse": 3.5
+    "yearsOfUse": 3.5,
+    "posted": "11-12-21"
   },
   {
-    "_id": "7f5b80c1cdd474496fyjy18883eae07349",
     "category_id": "03",
     "rating": { "number": 4.5, "badge": "Excellent" },
     "name": "Nord N10 5G",
-    "image_url": "https://th.bing.com/th/id/R.99730cf1442a9c1a4ade194c3fd641c9?rik=z2izGrvQI5gQhQ&pid=ImgRaw&r=0",
+    "image_url": "https://th.bing.com/th/id/OIP.rj7NIZXiBCQV_5uFcQ20KgHaEK?pid=ImgDet&rs=1",
     "details": "",
     "resale_price": 899,
     "location": "Barishal",
-    "original_price": 499,
-    "yearsOfUse": 3.5
+    "original_price": 1099,
+    "yearsOfUse": 3.5,
+    "posted": "11-12-21"
   },
   {
-    "_id": "7f5b80c1cdd4df0111918883eae07349",
     "category_id": "03",
     "rating": { "number": 4.5, "badge": "Excellent" },
     "name": "One Plus 9pro",
-    "image_url": "https://th.bing.com/th/id/R.99730cf1442a9c1a4ade194c3fd641c9?rik=z2izGrvQI5gQhQ&pid=ImgRaw&r=0",
+    "image_url": "https://th.bing.com/th/id/OIP.EMOM8baG2qmddvEHwiXJFQHaE8?pid=ImgDet&rs=1",
     "details": "",
-    "resale_price": 899,
+    "resale_price": 999,
     "location": "Dhaka",
-    "original_price": 499,
-    "yearsOfUse": 3.5
+    "original_price": 1199,
+    "yearsOfUse": 3.5,
+    "posted": "11-12-21"
   }
 ]
