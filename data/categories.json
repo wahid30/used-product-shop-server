@@ -1,16 +1,13 @@
 [
   {
-    "_id": "01",
     "name": "iphone",
     "image": "https://th.bing.com/th/id/R.9ade469f2a6aa4ca5a3d0d6587935644?rik=gzZB6bgM6g6Cqw&pid=ImgRaw&r=0"
   },
   {
-    "_id": "02",
     "name": "Samsung",
     "image": "https://th.bing.com/th/id/R.dfaa74badc2688356ab67e9d48483f8e?rik=kVeZp4Wah4MOWQ&pid=ImgRaw&r=0"
   },
   {
-    "_id": "03",
     "name": "One Plus",
     "image": "https://www.compsmag.com/wp-content/uploads/2020/02/Tech-News-Google039s-Pixel-2-is-an-outright-steal-at.jpg"
   }
