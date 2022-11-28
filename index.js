@@ -40,6 +40,7 @@ async function run() {
     const bookingsCollection = client
       .db("used-mobile-shop")
       .collection("bookings");
+    const usersCollection = client.db("used-mobile-shop").collection("users");
 
     // for load all mobiles
     app.get("/mobiles", async (req, res) => {
@@ -72,6 +73,19 @@ async function run() {
     });
 
     // for bookings
+    app.get("/bookings", async (req, res) => {
+      const email = req.query.email;
+      // const decodedEmail = req.decoded.email;
+
+      // if (email !== decodedEmail) {
+      //   return res.status(403).send({ message: "forbidden access" });
+      // }
+
+      const query = { email: email };
+      const bookings = await bookingsCollection.find(query).toArray();
+      res.send(bookings);
+    });
+
     app.post("/bookings", async (req, res) => {
       const booking = req.body;
       console.log(booking);
@@ -88,6 +102,14 @@ async function run() {
       }
 
       const result = await bookingsCollection.insertOne(booking);
+      res.send(result);
+    });
+
+    // for usersCollection
+    app.post("/users", async (req, res) => {
+      const user = req.body;
+      console.log(user);
+      const result = await usersCollection.insertOne(user);
       res.send(result);
     });
   } finally {
