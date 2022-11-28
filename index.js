@@ -37,6 +37,9 @@ async function run() {
     const categoriesCollection = client
       .db("used-mobile-shop")
       .collection("mobilesCategory");
+    const bookingsCollection = client
+      .db("used-mobile-shop")
+      .collection("bookings");
 
     // for load all mobiles
     app.get("/mobiles", async (req, res) => {
@@ -66,6 +69,26 @@ async function run() {
       // console.log(query);
       const selectedMobiles = await mobilesCollection.find(query).toArray();
       res.send(selectedMobiles);
+    });
+
+    // for bookings
+    app.post("/bookings", async (req, res) => {
+      const booking = req.body;
+      console.log(booking);
+      const query = {
+        item: booking.item,
+        email: booking.email,
+      };
+
+      const alreadyBooked = await bookingsCollection.find(query).toArray();
+
+      if (alreadyBooked.length) {
+        const message = `You already have a booking on ${booking.item}`;
+        return res.send({ acknowledged: false, message });
+      }
+
+      const result = await bookingsCollection.insertOne(booking);
+      res.send(result);
     });
   } finally {
   }
