@@ -59,6 +59,9 @@ async function run() {
       .db("used-mobile-shop")
       .collection("bookings");
     const usersCollection = client.db("used-mobile-shop").collection("users");
+    const productsCollection = client
+      .db("used-mobile-shop")
+      .collection("products");
 
     // for load all mobiles
     app.get("/mobiles", async (req, res) => {
@@ -191,6 +194,26 @@ async function run() {
         updatedDoc,
         options
       );
+      res.send(result);
+    });
+
+    // for product collection
+    app.get("/products", async (req, res) => {
+      const query = {};
+      const products = await productsCollection.find(query).toArray();
+      res.send(products);
+    });
+
+    app.post("/products", async (req, res) => {
+      const product = req.body;
+      const result = await productsCollection.insertOne(product);
+      res.send(result);
+    });
+
+    app.delete("/products/:id", async (req, res) => {
+      const id = req.params.id;
+      const filter = { _id: ObjectId(id) };
+      const result = await productsCollection.deleteOne(filter);
       res.send(result);
     });
   } finally {
