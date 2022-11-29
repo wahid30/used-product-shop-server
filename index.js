@@ -90,6 +90,16 @@ async function run() {
       res.send(selectedMobiles);
     });
 
+    //
+    app.get("/mobileSelection", async (req, res) => {
+      const query = {};
+      const result = await mobilesCollection
+        .find(query)
+        .project({ name: 1 })
+        .toArray();
+      res.send(result);
+    });
+
     // for bookings
     app.get("/bookings", verifyJWT, async (req, res) => {
       const email = req.query.email;
