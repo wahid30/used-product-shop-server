@@ -63,6 +63,18 @@ async function run() {
       .db("used-mobile-shop")
       .collection("products");
 
+    // NOTE: make sure you use verifyAdmin after verifyJWT
+    const verifyAdmin = async (req, res, next) => {
+      const decodedEmail = req.decoded.email;
+      const query = { email: decodedEmail };
+      const user = await usersCollection.findOne(query);
+
+      if (user?.role !== "admin") {
+        return res.status(403).send({ message: "forbidden access" });
+      }
+      next();
+    };
+
     // for load all mobiles
     app.get("/mobiles", async (req, res) => {
       const query = {};
@@ -172,14 +184,14 @@ async function run() {
     });
 
     // for make admin
-    app.put("/users/admin/:id", verifyJWT, async (req, res) => {
-      const decodedEmail = req.decoded.email;
-      const query = { email: decodedEmail };
-      const user = await usersCollection.findOne(query);
+    app.put("/users/admin/:id", verifyJWT, verifyAdmin, async (req, res) => {
+      // const decodedEmail = req.decoded.email;
+      // const query = { email: decodedEmail };
+      // const user = await usersCollection.findOne(query);
 
-      if (user?.role !== "admin") {
-        return res.status(403).send({ message: "forbidden access" });
-      }
+      // if (user?.role !== "admin") {
+      //   return res.status(403).send({ message: "forbidden access" });
+      // }
 
       const id = req.params.id;
       const filter = { _id: ObjectId(id) };
@@ -198,19 +210,19 @@ async function run() {
     });
 
     // for product collection
-    app.get("/products", async (req, res) => {
+    app.get("/products", verifyJWT, verifyAdmin, async (req, res) => {
       const query = {};
       const products = await productsCollection.find(query).toArray();
       res.send(products);
     });
 
-    app.post("/products", async (req, res) => {
+    app.post("/products", verifyJWT, verifyAdmin, async (req, res) => {
       const product = req.body;
       const result = await productsCollection.insertOne(product);
       res.send(result);
     });
 
-    app.delete("/products/:id", async (req, res) => {
+    app.delete("/products/:id", verifyJWT, verifyAdmin, async (req, res) => {
       const id = req.params.id;
       const filter = { _id: ObjectId(id) };
       const result = await productsCollection.deleteOne(filter);
