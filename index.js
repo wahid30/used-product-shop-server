@@ -4,6 +4,7 @@ const cors = require("cors");
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const port = process.env.PORT || 5000; //localhost:5000
 
 // middleware
@@ -32,6 +33,7 @@ const client = new MongoClient(uri, {
 
 function verifyJWT(req, res, next) {
   const authHeader = req.headers.authorization;
+  // console.log(authHeader);
   if (!authHeader) {
     return res.status(401).send("unauthorized access");
   }
@@ -62,6 +64,9 @@ async function run() {
     const productsCollection = client
       .db("used-mobile-shop")
       .collection("products");
+    const paymentsCollection = client
+      .db("used-mobile-shop")
+      .collection("payments");
 
     // NOTE: make sure you use verifyAdmin after verifyJWT
     const verifyAdmin = async (req, res, next) => {
@@ -129,9 +134,16 @@ async function run() {
       res.send(bookings);
     });
 
+    app.get("/bookings/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: ObjectId(id) };
+      const booking = await bookingsCollection.findOne(query);
+      res.send(booking);
+    });
+
     app.post("/bookings", async (req, res) => {
       const booking = req.body;
-      console.log(booking);
+      // console.log(booking);
       const query = {
         item: booking.item,
         email: booking.email,
@@ -147,12 +159,46 @@ async function run() {
       const result = await bookingsCollection.insertOne(booking);
       res.send(result);
     });
+    ////
+    app.post("/create-payment-intent", async (req, res) => {
+      const booking = req.body;
+      const resale_price = booking.resale_price;
+      const amount = resale_price * 100;
 
+      const paymentIntent = await stripe.paymentIntents.create({
+        currency: "usd",
+        amount: amount,
+        payment_method_types: ["card"],
+      });
+      res.send({
+        clientSecret: paymentIntent.client_secret,
+      });
+    });
+
+    app.post("/payments", async (req, res) => {
+      const payment = req.body;
+      const result = await paymentsCollection.insertOne(payment);
+      const id = payment.bookingId;
+      const filter = { _id: ObjectId(id) };
+      const updatedDoc = {
+        $set: {
+          paid: true,
+          transactionId: payment.transactionId,
+        },
+      };
+      const updatedResult = await bookingsCollection.updateOne(
+        filter,
+        updatedDoc
+      );
+      res.send(result);
+    });
     /////
     app.get("/jwt", async (req, res) => {
       const email = req.query.email;
+      console.log(email);
       const query = { email: email };
       const user = await usersCollection.findOne(query);
+      console.log(user);
       if (user) {
         const token = jwt.sign({ email }, process.env.ACCESS_TOKEN, {
           expiresIn: "1h",
@@ -178,7 +224,7 @@ async function run() {
 
     app.post("/users", async (req, res) => {
       const user = req.body;
-      console.log(user);
+      // console.log(user);
       const result = await usersCollection.insertOne(user);
       res.send(result);
     });
@@ -226,6 +272,13 @@ async function run() {
       const id = req.params.id;
       const filter = { _id: ObjectId(id) };
       const result = await productsCollection.deleteOne(filter);
+      res.send(result);
+    });
+
+    app.delete("/users/admin/:id", verifyJWT, verifyAdmin, async (req, res) => {
+      const id = req.params.id;
+      const filter = { _id: ObjectId(id) };
+      const result = await usersCollection.deleteOne(filter);
       res.send(result);
     });
   } finally {
